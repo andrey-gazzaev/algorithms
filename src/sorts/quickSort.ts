@@ -14,10 +14,22 @@ function partition(array: number[], low: number, high: number): number {
   return i + 1;
 }
 
-export function quickSort(array: number[], low: number, high: number): void {
+/**
+ * Quick sort.
+ * @param array Sortable array.
+ * @param low Start sorting index.
+ * @param high End sorting index.
+ */
+export function quickSort(
+  array: number[],
+  low: number,
+  high: number
+): number[] {
   if (low < high) {
-    const pi = partition(array, low, high);
-    quickSort(array, low, pi - 1); // Before pi
-    quickSort(array, pi + 1, high); // After pi
+    const partitionIndex = partition(array, low, high);
+    quickSort(array, low, partitionIndex - 1); // Before pi
+    quickSort(array, partitionIndex + 1, high); // After pi
   }
+
+  return array;
 }
