@@ -1,4 +1,8 @@
-export function getMaxAndMin(array: readonly number[]) {
+export function getMaxAndMin(
+  array: readonly number[],
+  low: number,
+  high: number
+) {
   let maxValue = array[0];
   let minValue = array[0];
   if (array.length === 1) {
@@ -7,7 +11,7 @@ export function getMaxAndMin(array: readonly number[]) {
 
   let indexMaxValue = 0;
   let indexMinValue = 0;
-  for (let i = 1; i < array.length; i++) {
+  for (let i = low; i < high; i++) {
     if (array[i] > maxValue) {
       maxValue = array[i];
       indexMaxValue = i;
