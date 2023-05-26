@@ -1,4 +1,4 @@
-import {generateSortedArray} from '../utils/generateSotredArray';
+import {generateSortedArray} from '../utils/generateSortedArray';
 import {shuffle} from '../utils/shuffle';
 import {selectionSort} from './selectionSort';
 

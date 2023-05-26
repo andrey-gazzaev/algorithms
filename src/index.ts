@@ -3,7 +3,7 @@ import {heapSort} from './sorts/heapSort';
 import {insertionSort} from './sorts/insertionSort';
 import {quickSort} from './sorts/quickSort';
 import {selectionSort} from './sorts/selectionSort';
-import {generateSortedArray} from './utils/generateSotredArray';
+import {generateSortedArray} from './utils/generateSortedArray';
 import {shuffle} from './utils/shuffle';
 import {timer} from './utils/timer';
 
