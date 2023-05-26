@@ -5,7 +5,7 @@ export function getMaxAndMin(
 ) {
   let maxValue = array[0];
   let minValue = array[0];
-  if (array.length === 1) {
+  if (array.length < 1) {
     return {maxValue, maxValueIdx: 0, minValue, mixValueIdx: 0};
   }
 
