@@ -1,19 +1,10 @@
+import {swap} from './swap';
+
 /** Fisher-Yates (aka Knuth) Shuffle. */
 export function shuffle<T>(array: T[]) {
-  let currentIndex = array.length,
-    randomIndex;
-
-  // While there remain elements to shuffle.
-  while (currentIndex !== 0) {
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
+  for (let i = array.length; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * i);
+    swap(array, i, randomIndex);
   }
 
   return array;
