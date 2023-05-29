@@ -2,7 +2,7 @@ import {swap} from './swap';
 
 /** Fisher-Yates (aka Knuth) Shuffle. */
 export function shuffle<T>(array: T[]) {
-  for (let i = array.length; i > 0; i--) {
+  for (let i = array.length - 1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * i);
     swap(array, i, randomIndex);
   }

@@ -1,6 +1,7 @@
 import {bubbleSort} from './sorts/bubbleSort';
 import {heapSort} from './sorts/heapSort';
 import {insertionSort} from './sorts/insertionSort';
+import {mergeSort} from './sorts/mergeSort';
 import {quickSort} from './sorts/quickSort';
 import {selectionSort} from './sorts/selectionSort';
 import {generateSortedArray} from './utils/generateSortedArray';
@@ -25,4 +26,7 @@ timer('quick sorting', () =>
 timer('selection sorting', () => selectionSort([...unsortedArray]));
 timer('insertion sort', () => {
   insertionSort([...unsortedArray]);
+});
+timer('merge sort', () => {
+  mergeSort([...unsortedArray]);
 });
