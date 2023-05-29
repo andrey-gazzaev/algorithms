@@ -1,7 +1,7 @@
 export function getMaxAndMin(
   array: readonly number[],
-  low: number,
-  high: number
+  low = 0,
+  high = array.length
 ) {
   let maxValue = array[0];
   let minValue = array[0];

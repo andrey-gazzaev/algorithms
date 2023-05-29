@@ -1,4 +1,5 @@
 import {bubbleSort} from './sorts/bubbleSort';
+import {countingSort} from './sorts/countingSort';
 import {heapSort} from './sorts/heapSort';
 import {insertionSort} from './sorts/insertionSort';
 import {mergeSort} from './sorts/mergeSort';
@@ -15,18 +16,21 @@ import {timer} from './utils/timer';
 // const sortedArray = generateSortedArray(50_000).reverse();
 const sortedArray = generateSortedArray(100_000).reverse();
 // const sortedArray = generateSortedArray(200_000).reverse();
-// const sortedArray = generateSortedArray(300_000).reverse();
+// const sortedArray = generateSortedArray(10_000_000).reverse();
 const unsortedArray = shuffle([...sortedArray]);
 
 timer('bubble sorting', () => bubbleSort([...unsortedArray]));
 timer('heap sorting', () => heapSort([...unsortedArray]));
-timer('quick sorting', () =>
-  quickSort([...unsortedArray], 0, unsortedArray.length - 1)
-);
 timer('selection sorting', () => selectionSort([...unsortedArray]));
 timer('insertion sort', () => {
   insertionSort([...unsortedArray]);
 });
 timer('merge sort', () => {
   mergeSort([...unsortedArray]);
+});
+timer('counting sort', () => {
+  countingSort([...unsortedArray]);
+});
+timer('quick sorting', () => {
+  quickSort([...unsortedArray], 0, unsortedArray.length - 1);
 });
