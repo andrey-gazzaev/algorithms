@@ -8,7 +8,7 @@
     "node": "18.12.1"
   },
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "measure-time": "ts-node src/index.ts",
     "test": "jest",
     "serve": "nodemon",
     "build": "tsc"
