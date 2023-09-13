@@ -1,9 +1,10 @@
 {
   "exclude": ["node_modules"],
   "compilerOptions": {
+    "types": ["node", "jest"],
     "rootDir": ".",
     "outDir": "build",
-    "target": "ES5",
+    "target": "ES2022",
     "experimentalDecorators": true,
     "strict": true,
   },
