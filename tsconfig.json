@@ -5,6 +5,7 @@
     "rootDir": ".",
     "outDir": "build",
     "target": "ES2022",
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "strict": true,
   },
