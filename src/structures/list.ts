@@ -29,6 +29,22 @@ export class List<T> {
     return values;
   }
 
+  /** Gets the value of the first element of the list. */
+  public getFirstItem(): T | null {
+    if (this.first === null) {
+      return null;
+    }
+    return this.first.value;
+  }
+
+  /** Gets the value of the last item in the list. */
+  public getLastItem(): T | null {
+    if (this.last === null) {
+      return null;
+    }
+    return this.last.value;
+  }
+
   /**
    * Gets list item by condition.
    * @param condition Search condition for a list item
