@@ -1,6 +1,8 @@
+import {faker} from '@faker-js/faker';
+
 import {List} from './list';
 
-const mockValues = [1, 2, 3];
+const mockValues = new Array(10).fill(null).map(() => faker.number.int());
 
 test('Transforming a list into an array', () => {
   const list = new List(...mockValues);
@@ -22,7 +24,7 @@ test('First and last elements', () => {
 
 test('Adding an item to the beginning', () => {
   const list = new List(...mockValues);
-  const expectedValue = 1;
+  const expectedValue = faker.number.int();
 
   list.unshift(expectedValue);
   expect(list.getFirstItem()).toBe(expectedValue);
@@ -37,7 +39,7 @@ test('Removing an item from the beginning', () => {
 
 test('Adding an item to the end', () => {
   const list = new List(...mockValues);
-  const expectedValue = 1;
+  const expectedValue = faker.number.int();
 
   list.push(expectedValue);
   expect(list.getLastItem()).toBe(expectedValue);
