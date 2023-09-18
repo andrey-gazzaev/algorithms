@@ -32,6 +32,6 @@ test('Deleting an item from the queue', () => {
   const queue = new Queue(...mockValues);
   expect(queue.length).toBe(mockValues.length);
 
-  expect(queue.pop()).toEqual(mockValues.at(-1));
+  expect(queue.shift()).toEqual(mockValues.at(0));
   expect(queue.length).toBe(mockValues.length - 1);
 });

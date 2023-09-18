@@ -21,7 +21,7 @@ export class Queue<T> {
    * Deletes and returns an item from the beginning of the queue.
    * If the queue is empty, null value is returned.
    */
-  public pop(): T | null {
-    return this.set.pop();
+  public shift(): T | null {
+    return this.set.shift();
   }
 }
